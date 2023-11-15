@@ -1,0 +1,352 @@
+/*
+
+- Font sizes (px):
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128 / 144
+
+*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* 1 rem = 10px */
+  font-size: 62.5%;
+}
+@media (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+@media (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+body {
+  width: 100vw;
+  max-width: 100%;
+  font-family: "Open Sans", sans-serif;
+  background-color: #cdcdcd;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/**************************/
+/* HEADER SECTION */
+/**************************/
+
+.header {
+  background-color: #1c1c1c;
+  color: #fff;
+  display: flex;
+  justify-content: space-around;
+  padding: 3.2rem 0;
+}
+
+@media (max-width: 37.5em) {
+  .header {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+  }
+}
+
+.title-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 4.8rem;
+  font-family: "Cambo", serif;
+  font-weight: 300;
+  text-shadow: 0.1rem 0.1rem #fff;
+  padding-top: 1.2rem;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #999999;
+  font-weight: 400;
+  line-height: 0.9rem;
+}
+
+.searchbar-form {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.searchbar-input {
+  background-color: transparent;
+  border: 1px solid #3e3e3e;
+  border-radius: 1px;
+  font-size: 1.2rem;
+  text-decoration: none;
+  padding: 0.6rem 4.8rem 0.6rem 1.2rem;
+}
+
+.searchbar-button {
+  font-weight: 700;
+  background-color: #3e3e3e;
+  border-radius: 1.2rem;
+  padding: 0.4rem 1.2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/**************************/
+/* HERO SECTION */
+/**************************/
+
+.hero {
+  background-image: url("../../assets/puzzle.png");
+  width: 100%;
+  height: 80vh;
+  background-size: cover;
+}
+
+.hero-container {
+  color: #fff;
+  font-family: "Cambo", serif;
+  position: relative;
+  margin-top: 24rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 75em) {
+  .hero-container {
+    margin-top: 3rem;
+  }
+}
+
+@media (max-width: 56.25em) {
+  .hero-container {
+    margin-top: 12rem;
+  }
+}
+
+.hero-container h1 {
+  font-size: 4.4rem;
+  font-weight: 500;
+  background-color: #1c1c1c;
+  opacity: 89%;
+  padding: 1.2rem 3.2rem;
+}
+
+.hero-container h2 {
+  font-size: 3.2rem;
+  font-weight: 500;
+  background-color: #1c1c1c;
+  opacity: 80%;
+  padding: 0.6rem 1.2rem;
+  margin-right: 4.2rem;
+  letter-spacing: -0.1rem;
+}
+
+/**************************/
+/* FEATURE-CARD SECTION */
+/**************************/
+
+.feature-container {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(25%, 1fr));
+  grid-gap: 1rem;
+  gap: 0.8rem;
+  width: 60%;
+  transform: translate(30%, -30%);
+  margin-left: 1.8rem;
+}
+
+@media (max-width: 75em) {
+  .feature-container {
+    grid-template-columns: repeat(2, minmax(50%, 1fr));
+    gap: 3.2rem;
+  }
+}
+
+@media (max-width: 56.25em) {
+  .feature-container {
+    grid-template-columns: repeat(2, minmax(50%, 1fr));
+    transform: translate(30%, -10%);
+  }
+}
+@media (max-width: 37.5em) {
+  .feature-container {
+    grid-template-columns: repeat(1, minmax(100%, 1fr));
+    transform: translate(30%, -20%);
+    gap: 4.2rem;
+  }
+}
+
+.card {
+  color: #3e3e3e;
+  background-color: #fff;
+  -webkit-box-reflect: below 0.2rem
+    linear-gradient(transparent 95%, rgba(242, 242, 242, 0.4) 100%);
+  padding: 2.4rem 3.2rem 1.8rem 3.2rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card:hover {
+  background-image: linear-gradient(to bottom, #3e3e3e, #1c1c1c);
+}
+
+.border-normal {
+  border-top-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+}
+
+.border-reverse {
+  border-top-right-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+}
+
+.card-letter {
+  text-transform: uppercase;
+  font-size: 6.2rem;
+  font-weight: 700;
+  color: #1c1c1c;
+}
+
+.card-title {
+  font-family: "Yellowtail", cursive;
+  font-size: 3.6rem;
+  padding-bottom: 1.2rem;
+}
+
+.card:hover .card-letter,
+.card:hover .card-title {
+  color: #fff;
+}
+
+.card-subtitle,
+.card-text {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.card-subtitle {
+  color: #2fb2eb;
+}
+
+.card-text {
+  margin-bottom: 1.2rem;
+}
+
+.card:hover .card-text {
+  color: #787878;
+}
+
+.card-button {
+  background-image: linear-gradient(to bottom, #5495b1, #1d4a63);
+
+  font-size: 1.8rem;
+  border-radius: 2.4rem;
+  padding: 0.6rem 1.8rem;
+  color: #fff;
+  font-family: "Cambo", serif;
+  margin-bottom: 1.2rem;
+}
+
+.card:hover .card-button {
+  color: #3e3e3e;
+  background-image: linear-gradient(to bottom, #fff, #e9ecef);
+}
+
+/**************************/
+/* FEATURE-SECTION --- TEXT */
+/**************************/
+
+.text-container {
+  width: 62%;
+  margin: 0 auto;
+  margin-top: -5.2rem;
+  padding: 1rem;
+  background-image: linear-gradient(to bottom, #b9b9b9, #909090);
+  border-radius: 2rem;
+
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media (max-width: 75em) {
+  .text-container {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 56.25em) {
+  .text-container {
+    margin-top: -3.2rem;
+  }
+}
+@media (max-width: 37.5em) {
+  .text-container {
+    margin-top: -14.8rem;
+  }
+}
+
+.text-content {
+  color: #fff;
+  font-size: 1.8rem;
+  padding: 1.2rem 1.2rem;
+  margin-left: 1.2rem;
+}
+
+/**************************/
+/* SOCIAL MEDIA SECTION */
+/**************************/
+
+.social-icon-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.2rem;
+
+  width: 62%;
+  margin: 3.2rem auto;
+}
+
+@media (max-width: 75em) {
+  .social-icon-container {
+    justify-content: center;
+  }
+}
+
+.social-icon {
+  border: 0;
+  border-radius: 1rem;
+}
+
+/**************************/
+/* FOOTER */
+/**************************/
+
+footer {
+  padding: 6.4rem 0;
+  background-color: #1c1c1c;
+}
